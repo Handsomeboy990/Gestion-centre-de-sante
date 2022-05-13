@@ -62,7 +62,7 @@
                         <i class='fas fa-fw fa-book-medical nav_icon'></i> 
                         <span class="nav_name">Consultations</span> 
                     </a> 
-                    <a href="#" class="nav_link"> 
+                    <a href="statistique.html" class="nav_link"> 
                         <i class='fas fa-fw fa-chart-pie nav_icon'></i> 
                         <span class="nav_name">Statistiques</span> 
                     </a> 
@@ -100,7 +100,7 @@
                             </h1>
                         </div>
 
-                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="w-50 d-flex justify-content-end">
                             <ol class="breadcrumb">
                             <li class="breadcrumb-item"><i class="fas fa-fw fa-home"></i><a href="tableau_de_bord.html">Accueil</a></li>
                             <li class="breadcrumb-item"><i class="fas fa-fw fa-user"></i><a href="patient.html">Patients</a></li>
@@ -170,7 +170,7 @@
                                 
                                             <div class="col-sm-12">   
                                                 
-                                                <table class="table table-bordered dataTable" role="grid" aria-describedby="dataTable_info" style="width: 100%;" width="100%" cellspacing="0">
+                                                <table class="table table-hover table-success table-striped  border-primary  dataTable" role="grid" aria-describedby="dataTable_info" style="width: 100%;" width="100%" cellspacing="0">
                                                     <thead>
                                                         <tr role="row">
                                                             <th scope="col" class="col-2 text-center">N°dossier</th>
@@ -329,6 +329,10 @@
             <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Date:</label>
             <input type="datetime-local" class="form-control" id="recipient-name">
+            </div>
+            <div class="mb-3">
+                <label for="color" class="col-form-label">Couleur:</label>
+                <input type="color" name="color" id="color">
             </div>
             <div class="mb-3">
             <label for="message-text" class="col-form-label">Description:</label>

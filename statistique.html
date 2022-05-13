@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
-    <title> Patients | Gestion de traitement des patients</title>
+    <title> Tableau de bord | Gestion de traitement des patients</title>
 
     <!-- lien fontawesome -->
     <link rel="stylesheet" href="css/fontawesome/css/all.min.css">
@@ -54,7 +54,7 @@
                         <i class='fas fa-fw fa-calendar-day nav_icon'></i> 
                         <span class="nav_name">Agenda</span> 
                     </a> 
-                    <a href="patient.html" class="nav_link active"> 
+                    <a href="patient.html" class="nav_link"> 
                         <i class='fas fa-fw fa-user nav_icon'></i> 
                         <span class="nav_name">Patients</span> 
                     </a> 
@@ -62,7 +62,7 @@
                         <i class='fas fa-fw fa-book-medical nav_icon'></i> 
                         <span class="nav_name">Consultations</span> 
                     </a> 
-                    <a href="statistique.html" class="nav_link"> 
+                    <a href="statistique.html" class="nav_link active"> 
                         <i class='fas fa-fw fa-chart-pie nav_icon'></i> 
                         <span class="nav_name">Statistiques</span> 
                     </a> 
@@ -70,9 +70,8 @@
                 </div>
             </div> <a href="connexion.html" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">Déconnexion</span> </a>
         
-        
             <!-- footer-->
-            
+    
             <footer class="sticky-footer">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto" style="font-size: small; color: rgba(0, 0, 0, 0.932);">
@@ -94,69 +93,112 @@
 
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         
-                        <div>
+                        <div class="w-50">
                             <h1 class="h3 mb-0 text-gray-800">
-                                <i class="fas fa-fw fa-user"></i>
-                                <span>Patients</span>
+                                <i class="fas fa-fw fa-chart-pie"></i>
+                                <span>Statistiques</span>  
                             </h1>
                         </div>
 
                         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="w-50 d-flex justify-content-end">
                             <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><i class="fas fa-fw fa-home nav_icon"></i><a href="tableau_de_bord.html">Accueil</a></li>
-                            <li class="breadcrumb-item"><i class="fas fa-fw fa-user nav_icon"></i><a href="patient.html">Patients</a></li>
+                            <li class="breadcrumb-item"><i class="fas fa-fw fa-home"></i><a href="tableau_de_bord.html">Accueil</a></li>
+                            <li class="breadcrumb-item"><i class="fas fa-fw fa-chart-pie"></i><a href="agenda.html">Statistiques</a></li>
                             </ol>
                         </nav>
                     </div>
 
-                    <div class="row mt-5">
+                    <div class="row justify-content-around">
 
-                        <div class="col-xl-6 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 ">
+                        <div class="col-xl-5 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 ">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3 fs-3 carte">Liste des patients</div>
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3 fs-3 carte">Tableau de bord</div>
+                                            <div>Graphes</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-list fa-2x text-gray-300"></i>
+                                            <i class="fas fa-chart-pie fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="d-grid gap-2">
-                                    <a href="liste_patient.html" class="btn btn-primary">Voir
+                                    <a href="graphiques.html" class="btn btn-success">Aller
                                         <span><i class="fas fa-fw fa-arrow-circle-right"></i></span>
                                     </a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-xl-6 col-md-6 mb-4">
-                            <div class="card border-left-danger shadow h-100 ">
+                        <div class="col-xl-5 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 ">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3 fs-4 carte">Ajouter patient</div>
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3 fs-4 carte">Tableau de bord</div>
+                                            <div>Tableaux</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-user-edit fa-2x text-gray-300"></i>
+                                            <i class="fas fa-chart-pie fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="d-grid gap-2">
-                                    <a href="inscription-patient.html" class="btn btn-danger">Aller
+                                    <a href="tableaux.html" class="btn btn-success">Aller
                                         <span><i class="fas fa-fw fa-arrow-circle-right"></i></span>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        
+
+                        <div class="col-xl-5 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 ">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3 fs-4 carte">Rapports mensuels</div>
+                                            <div>Hospitalisation</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-chart-pie fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <a href="#" class="btn btn-success">Aller
+                                        <span><i class="fas fa-fw fa-arrow-circle-right"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-5 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 ">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3 fs-4 carte">Rapports mensuels</div>
+                                            <div>Consultations</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-chart-pie fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <a href="#" class="btn btn-success">Aller
+                                        <span><i class="fas fa-fw fa-arrow-circle-right"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>    
             
             </div>
         </div>
-
 
     </div>
 

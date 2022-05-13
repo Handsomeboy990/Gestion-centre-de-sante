@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <title> Consultations | Gestion de traitement des patients</title>
+
+    <!-- lien fontawesome -->
+    <link rel="stylesheet" href="css/fontawesome/css/all.min.css">
+
+    <!-- lien fichier css -->
+    <link rel="stylesheet" href="css/style.css">
+   
+    <!-- lien boxicons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    
+    <!-- lien bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+
+</head>
+
+
+<body id="body-pd" style="height: max-content;">
+
+    <header class="header" id="header">
+        <div class="header_toggle"> 
+            <i class='bx bx-menu' id="header-toggle"></i> 
+        </div>
+        
+        <div class="d-flex ">         
+            <span class="mr-2 d-flex d-lg-inline text-gray-600 small align-self-center" style="margin-right: 10px; color: grey;">Jane Doe</span>
+             <img src="images/janedoe.jpg"  class="header_img"> 
+        </div>
+    </header>
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div> 
+                <a class="sidebar-brand d-flex align-items-center justify-content-center conteneur-img-dash nav_link" style="left: 40px;" href="tableau_de_bord.html">
+                    <div class="sidebar-brand-icon">
+                        <img class="image-dashboard img-fluid" src="images/logo.png" alt="Logo du centre de santé">
+                    </div>
+                </a>
+
+                <hr class="sidebar-divider">
+
+                <div class="nav_list"> 
+                    <a href="tableau_de_bord.html" class="nav_link"> 
+                        <i class='fas fa-fw fa-home nav_icon'></i> 
+                        <span class="nav_name">Accueil</span> 
+                    </a> 
+                    <a href="agenda.html" class="nav_link"> 
+                        <i class='fas fa-fw fa-calendar-day nav_icon'></i> 
+                        <span class="nav_name">Agenda</span> 
+                    </a> 
+                    <a href="patient.html" class="nav_link"> 
+                        <i class='fas fa-fw fa-user nav_icon'></i> 
+                        <span class="nav_name">Patients</span> 
+                    </a> 
+                    <a href="consultation.html" class="nav_link"> 
+                        <i class='fas fa-fw fa-book-medical nav_icon'></i> 
+                        <span class="nav_name">Consultations</span> 
+                    </a> 
+                    <a href="statistique.html" class="nav_link active"> 
+                        <i class='fas fa-fw fa-chart-pie nav_icon'></i> 
+                        <span class="nav_name">Statistiques</span> 
+                    </a> 
+                
+                </div>
+            </div> <a href="connexion.html" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">Déconnexion</span> </a>
+        
+            <!-- footer-->
+
+            <footer class="sticky-footer">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto" style="font-size: small; color: rgba(0, 0, 0, 0.932);">
+                        <span>Copyright &copy; 2022 Medical Team, tous droits réservés.</span>
+                    </div>
+                </div>
+            </footer> 
+
+        </nav>   
+    </div>
+    
+    <!-- partie principale-->
+
+    <div id="contenu-partie-droite" class="d-flex flex-column">
+        <div class="height-100 contenu-principal row align-items-start">
+            <div id="contenu" style="margin-top: 50px; padding-top: 20px;">
+
+                <div class="container-fluid">
+
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        
+                        <div class="w-50">
+                            <h1 class="h3 mb-0 text-gray-800">
+                                <i class="fas fa-fw fa-chart-pie"></i>
+                                <span>Tableau de bord</span>  
+                            </h1>
+                            <p class="paragraphe-titre">Tableaux</p>
+                        </div>
+
+                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="w-50 d-flex justify-content-end">
+                            <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><i class="fas fa-fw fa-home"></i><a href="tableau_de_bord.html">Accueil</a></li>
+                            <li class="breadcrumb-item"><i class="fas fa-fw fa-chart-pie"></i><a href="statistique.html">Statistiques</a></li>
+                            <li class="breadcrumb-item"><i class="fas fa-fw fa-chalkboard"></i><a href="statistique.html">Tableau de bord</a></li>
+                            <li class="breadcrumb-item"><i class="fas fa-fw fa-table"></i><a href="tableaux.html">Tableaux</a></li>
+                            </ol>
+                        </nav>
+                    </div>
+
+                    <div class="row w-100 justify-content-end">
+                        
+                        <button id="btnGroupDrop1" type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="width: 20%; margin-left: 25px; color: whitesmoke;">
+                            <i class="fas fa-fw fa-calendar-alt"></i>
+                            <span>Choisir une période</span>
+                        </button>
+                        <ul class="dropdown-menu w-25">
+                            <li>
+                                <form>
+                                    <div>
+                                    <label for="recipient-name" class="col-form-label">Date:</label>
+                                    <input type="date" class="form-control" id="recipient-name">
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+
+                        <button type="button" class="btn btn-success" style="width: 20%; margin-left: 25px;">
+                            <i class="fas fa-fw fa-print"></i>
+                            <span>Imprimer</span>
+
+                        </button>
+
+                    </div>
+
+                    <div class="container mt-5">
+
+                        <div class="row shadow-sm p-3 mb-5 rounded">
+
+                            <nav class="nav nav-pills nav-justified flex-row">
+                                <a class="nav-link link-dark" aria-current="page" href="graphiques.html"><i class="fas fa-fw fa-chart-bar" style="margin-right: 15px;"></i>Graphiques</a>
+                                <a class="nav-link active" href="tableaux.html"><i class="fas fa-fw fa-table" style="margin-right: 15px;"></i>Tableaux</a>
+                            </nav>
+
+                        </div>
+                        
+                        <div class="row justify-content-around">
+    
+                            <div class="card text-white col-xl-5 col-md-6 mb-4" style="max-width: 50rem; padding-left: 0px; padding-right: 0px; background-color: rgba(189, 181, 181, 0.856);">
+
+                                <div class="card-header bg-success fw-bold">Répartition des patients selon l'age</div>
+
+                                <div class="card-body">
+
+                                    <table class="table table-bordered border-light">
+                                        <thead>
+                                            
+                                            <tr role="row">
+                                                <th scope="col" class="col-8">Tranche d'ages (ans)</th>
+                                                <th scope="col" class="col-4 text-center">Total</th>
+                                            </tr>
+
+                                        </thead>
+
+                                        <tbody>
+                                            
+                                            <tr class="odd">
+                                                <th scope="row" class="fw-normal">[1-15]</th>
+                                                <td class="text-center">247</td>
+                                            </tr>
+                                            <tr class="odd">
+                                                <th scope="row" class="fw-normal">[16-59]</th>
+                                                <td class="text-center">852</td>
+                                            </tr>
+                                            <tr class="odd">
+                                                <th scope="row" class="fw-normal">[+60]</th>
+                                                <td class="text-center">657</td>
+                                            </tr>
+
+                                        </tbody>
+
+                                        <tfoot>
+                                            
+                                            <tr>
+                                                <th>Total</th>
+                                                <th class="text-center">1756</th>
+                                            </tr>
+
+                                        </tfoot>
+
+                                    </table>
+                                      
+                                </div>
+                            </div>
+
+                            <div class="card text-white col-xl-5 col-md-6 mb-4" style="max-width: 50rem; padding-left: 0px; padding-right: 0px; background-color: rgba(189, 181, 181, 0.856);">
+
+                                <div class="card-header bg-success fw-bold">Répartition des patients selon le sexe</div>
+
+                                <div class="card-body">
+
+                                    <table class="table table-bordered border-light">
+                                        <thead>
+                                            
+                                            <tr role="row">
+                                                <th scope="col" class="col-8">Libellé</th>
+                                                <th scope="col" class="col-4 text-center">Total</th>
+                                            </tr>
+
+                                        </thead>
+
+                                        <tbody>
+                                            
+                                            <tr class="odd">
+                                                <th scope="row" class="fw-normal">Masculin</th>
+                                                <td class="text-center">800</td>
+                                            </tr>
+                                            <tr class="odd">
+                                                <th scope="row" class="fw-normal">Féminin</th>
+                                                <td class="text-center">956</td>
+                                            </tr>
+
+                                        </tbody>
+
+                                        <tfoot>
+                                            
+                                            <tr>
+                                                <th>Total</th>
+                                                <th class="text-center">1756</th>
+                                            </tr>
+
+                                        </tfoot>
+                                        
+                                    </table>
+                                      
+                                </div>
+                            </div>
+
+                            <div class="card text-white col-xl-5 col-md-6 mb-4" style="max-width: 50rem; padding-left: 0px; padding-right: 0px; background-color: rgba(189, 181, 181, 0.856);">
+
+                                <div class="card-header bg-success fw-bold">Répartition des patients selon la provenance</div>
+
+                                <div class="card-body">
+
+                                    <table class="table table-bordered border-light">
+                                        <thead>
+                                            
+                                            <tr role="row">
+                                                <th scope="col" class="col-8">Libellé</th>
+                                                <th scope="col" class="col-4 text-center">Total</th>
+                                            </tr>
+
+                                        </thead>
+
+                                        <tbody>
+                                            
+                                            <tr class="odd">
+                                                <th scope="row" class="fw-normal">Zone rurale</th>
+                                                <td class="text-center">247</td>
+                                            </tr>
+                                            <tr class="odd">
+                                                <th scope="row" class="fw-normal">Zone urbaine</th>
+                                                <td class="text-center">852</td>
+                                            </tr>
+                                            <tr class="odd">
+                                                <th scope="row" class="fw-normal">Autre</th>
+                                                <td class="text-center">657</td>
+                                            </tr>
+
+                                        </tbody>
+
+                                        <tfoot>
+                                            
+                                            <tr>
+                                                <th>Total</th>
+                                                <th class="text-center">1756</th>
+                                            </tr>
+
+                                        </tfoot>
+                                        
+                                    </table>
+                                      
+                                </div>
+                            </div>
+
+                            <div class="card text-white col-xl-5 col-md-6 mb-4" style="max-width: 50rem; padding-left: 0px; padding-right: 0px; background-color: rgba(189, 181, 181, 0.856);">
+
+                                <div class="card-header bg-success fw-bold">Répartition des patients selon l'age</div>
+
+                                <div class="card-body">
+
+                                    <table class="table table-bordered border-light">
+                                        <thead>
+                                            
+                                            <tr role="row">
+                                                <th scope="col" class="col-8">Tranche d'ages (ans)</th>
+                                                <th scope="col" class="col-4 text-center">Total</th>
+                                            </tr>
+
+                                        </thead>
+
+                                        <tbody>
+                                            
+                                            <tr class="odd">
+                                                <th scope="row" class="fw-normal">[1-15]</th>
+                                                <td class="text-center">247</td>
+                                            </tr>
+                                            <tr class="odd">
+                                                <th scope="row" class="fw-normal">[16-59]</th>
+                                                <td class="text-center">852</td>
+                                            </tr>
+                                            <tr class="odd">
+                                                <th scope="row" class="fw-normal">[+60]</th>
+                                                <td class="text-center">657</td>
+                                            </tr>
+
+                                        </tbody>
+
+                                        <tfoot>
+                                            
+                                            <tr>
+                                                <th>Total</th>
+                                                <th class="text-center">1756</th>
+                                            </tr>
+
+                                        </tfoot>
+                                        
+                                    </table>
+                                      
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
+
+
+    <!--Scripts -->
+
+    <script src="css/sidebar.js"></script>
+
+    <script src="css/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
